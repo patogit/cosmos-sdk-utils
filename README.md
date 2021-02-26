@@ -14,6 +14,8 @@ Testnet initial instructions: https://github.com/regen-network/testnets/tree/mas
 
 What is Regen Network: https://www.regen.network
 
+Regen Network official documentation: https://docs.regen.network
+
 What do validators do? https://github.com/cosmos/cosmos/blob/master/VALIDATORS_FAQ.md
 
 Cosmos-SDK: https://github.com/cosmos/cosmos-sdk
