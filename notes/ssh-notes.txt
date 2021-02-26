@@ -1,0 +1,13 @@
+For setting up SSH login to servers and scp.
+
+local host:
+MYKEYNAME=testing-key72 # or whatever name you want
+ssh-keygen # this gives an option to namethe key. It's a good idea to give it a unique name.
+chmod 400 ~/.ssh/$MYKEYNAME
+ssh-add ~/.ssh/$MYKEYNAME
+
+remote host:
+put the new .pub key there, then cat key.pub >> authorized_keys && sudo systemctl restart sshd
+
+local host, fetch remote file:
+scp -v user@ip.addr:/home/dev/.regen/data-backup-block-235350-ish.tar.gz .

@@ -1,0 +1,8 @@
+This loop achieved about 30-60 tx/block. If sign-batch worked, it would probably be able to build much larger tx batches.
+
+regen q account regen:1hqkha9cjmhv9gxchvmps0wry9p409yzrauqhyl
+
+SEQ=1
+TXLOOP=0
+
+while [ $TXLOOP -le 3 ]; do echo "Sequence:" $SEQ && regen tx bank send regen:1hqkha9cjmhv9gxchvmps0wry9p409yzrauqhyl regen:1wf72kav5stff2lfcdzv2hcvdm238tjlp6qnsgw 1utree --memo "ii-nunkari-validator sent this tx"  --fees=6000utree --chain-id=aplikigo-1 --offline --generate-only > tx-test-$SEQ.json && echo <your-keychain-passphrase> | regen tx sign tx-test-$SEQ.json --from ii-nunkari-factory-key --offline --sequence=$SEQ --account-number=11591 --chain-id=aplikigo-1 > signed-tx-test-$SEQ.json && regen tx broadcast signed-tx-test-$SEQ.json --broadcast-mode=async --chain-id=aplikigo-1 && ((SEQ++));  ((TXLOOP++)); done;
