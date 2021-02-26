@@ -4,6 +4,8 @@ This repository is for scripts and other code related to regen-ledger, which is 
 
 The tools and info in this repo are related to the Aplikigo-1 testnet run by Regen Network from February 8 - March 15, 2021.
 
+See also the regen-utils repo at https://github.com/swidnikk/regen-utils .
+
 ## Links
 
 Testnet plan: https://github.com/regen-network/testnets/blob/master/aplikigo-1/PLAN.md
