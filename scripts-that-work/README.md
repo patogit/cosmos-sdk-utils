@@ -1,0 +1,1 @@
+When I create a new server, I specify that my SSH key should me used for login, then I login as root and run new-server-user-setup.sh. That reboots the server, and I login as the new user, and run go-regen-cosmovisor-install.sh -- the first run installs go, then I reboot and run it again to install regen-ledger and cosmovisor.
