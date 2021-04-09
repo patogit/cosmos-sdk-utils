@@ -79,7 +79,7 @@ echo "regen keys add <key-name> --recover"
 echo "---------------"
 
 echo "To configure your node before starting, see"
-echo "https://github.com/patogit/mainnet/tree/main/regen-1"
+echo "https://github.com/regen-network/mainnet/tree/main/regen-1"
 echo "---------------"
 
 echo "Before starting your node, review the utility scripts at"
