@@ -15,17 +15,24 @@ passwd $NEWUSERNAME
 
 echo "Updating the system."
 apt update && sudo apt upgrade
-apt install build-essential jq -y
+apt install build-essential jq fail2ban -y
 
 echo "Copying SSH keys to $NEWUSERNAME home directory."
 rsync --archive --chown=$NEWUSERNAME:$NEWUSERNAME ~/.ssh /home/$NEWUSERNAME
 
 echo "Disabling root login via SSH."
-echo "Now you manually set PermitRootLogin no and PasswordAuthentication no."
+echo "Now you manually set PermitRootLogin no and PasswordAuthentication no and custom port."
 echo "Press space to begin editing, and ctrl-x when done editing."
 read -s -d ' '
 nano /etc/ssh/sshd_config
 service sshd restart
+
+echo "Setting up Fail2Ban - enabled ssh, bantime, maxretry"
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+nano /etc/fail2ban/jail.local
+sudo service fail2ban start && sudo service fail2ban enable
+echo "The following should reflect the new fail2ban rules"
+iptables -L
 
 echo "Finished setup. Press space to reboot, or ctrl-c to exit this script."
 read -s -d ' '
