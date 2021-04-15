@@ -29,6 +29,8 @@ service sshd restart
 
 echo "Setting up Fail2Ban - enabled ssh, bantime, maxretry"
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+echo "Press space to begin editing, and ctrl-x when done editing."
+read -s -d ' '
 nano /etc/fail2ban/jail.local
 sudo service fail2ban start && sudo service fail2ban enable
 echo "The following should reflect the new fail2ban rules"
