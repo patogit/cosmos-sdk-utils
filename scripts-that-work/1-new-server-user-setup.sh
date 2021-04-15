@@ -14,7 +14,7 @@ echo "Please set a password for $NEWUSERNAME:"
 passwd $NEWUSERNAME
 
 echo "Updating the system."
-apt update && sudo apt upgrade
+apt update && apt upgrade -y
 apt install build-essential jq fail2ban -y
 
 echo "Copying SSH keys to $NEWUSERNAME home directory."
