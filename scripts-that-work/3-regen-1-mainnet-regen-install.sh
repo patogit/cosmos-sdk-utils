@@ -22,6 +22,8 @@ git fetch
 git checkout $REGENVERSION
 make build
 
+mv build/regen $GOBIN
+
 regen version
 
 echo "regen-ledger" $REGENVERSION "built and installed. Press space to continue."
