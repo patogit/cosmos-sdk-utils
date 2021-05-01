@@ -14,8 +14,9 @@ echo "Please set a password for $NEWUSERNAME:"
 passwd $NEWUSERNAME
 
 echo "Updating the system."
+sudo add-apt-repository ppa:longsleep/golang-backports
 apt update && apt upgrade -y
-apt install build-essential jq fail2ban -y
+apt install build-essential jq fail2ban golang-go -y
 
 echo "Copying SSH keys to $NEWUSERNAME home directory."
 rsync --archive --chown=$NEWUSERNAME:$NEWUSERNAME ~/.ssh /home/$NEWUSERNAME
