@@ -60,7 +60,7 @@ sudo systemctl daemon-reload && sudo systemctl enable desmos.service
 desmos init --chain-id=$CHAINID $MONIKER
 
 echo "Get morpheus-apollo-1 testnet genesis"
-curl -s https://raw.githubusercontent.com/desmos-labs/morpheus/master/morpheus-apollo-1/genesis.json > ~/.sentinelhubd/config/genesis.json
+curl -s https://raw.githubusercontent.com/desmos-labs/morpheus/master/morpheus-apollo-1/genesis.json > ~/.desmos/config/genesis.json
 echo "Checksums"
 jq -S -c -M '' ~/.desmos/config/genesis.json | shasum -a 256
 echo "0f531ba4298a0c23e5ba13fa0a6c1aee62c5a9f1204e98b9ba792cf825b1aaa0"
