@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# This script is part of a set of scripts that set up a node for the regen-1 mainnet of regen-ledger.
+# This script is part of a set of scripts that set up a node for the sentinelhub-1 mainnet of Sentinel Network.
 # Run this as a user that can sudo.
 # This script puts things in ~/.profile with the assumption that you will run it from a non-login shell.
 # If you prefer to do your operations from a login shell, change .profile to .bashrc.
-# 1) Set up a non-root user and log in as that user.
-# 2) Run the go-install.sh script.
-# 3) Reboot.
-# 4) Run this script to install regen-ledger and cosmovisor.
+# 1) Set up a non-root user and log in as that user. You can use script 1 from this repo for that purpose.
+# 2) Run the 2-go-path-settings.sh script.
+# 3) Run . ~/.profile.
+# 4) Run this script to install sentinelhubd and sentinelhubcli and initialize on the chain of your choosing.
+#
+# ./2-sentinel-mainnet-install.sh <hub-version> <chain-id> <moniker>
+# for example:
 # ./2-sentinel-mainnet-install.sh v0.5.0 sentinelhub-1 "\"Akik Takat P2P 1\""
 
 # Set versions of cosmos-sdk (for cosmovisor) and regen-ledger before running this script.
