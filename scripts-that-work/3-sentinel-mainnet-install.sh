@@ -11,7 +11,8 @@
 #
 # ./2-sentinel-mainnet-install.sh <hub-version> <chain-id> <moniker>
 # for example:
-# ./2-sentinel-mainnet-install.sh v0.5.0 sentinelhub-1 "\"Akik Takat P2P 1\""
+# ./2-sentinel-mainnet-install.sh v0.5.0 sentinelhub-1 my-moniker
+# make sure your moniker has no spaces. You can change the moniker later if you want to add spaces.
 
 # Set versions of cosmos-sdk (for cosmovisor) and regen-ledger before running this script.
 VERSION=$1
@@ -72,12 +73,15 @@ echo "79a2b73ed7ef35f767d1591a78086d594b11c65af75945e615371d35b94b613d"
 echo "Verify that the two strings above are equal. Press space to continue."
 read -s -d ' '
 
-echo "Copy this string and push space when you're ready to paste it into the seeds section"
+echo "This is the address for the seed node for sentinelhub-1:"
 echo "c7859082468bcb21c914e9cedac4b9a7850347de@167.71.28.11:26656"
+echo "Copy this address so that you can paste it into the seeds section of config.toml"
+echo "Push space when you have copied it and you're ready to edit."
 read -s -d ' '
 nano ${HOME}/.sentinelhubd/config/config.toml
 
-echo "edit app.toml to your liking"
+echo "Now you will edit app.toml to your liking, perhaps adding minimum-gas-prices."
+echo "Press space when you are ready to edit."
 read -s -d ' '
 nano ${HOME}/.sentinelhubd/config/app.toml
 
