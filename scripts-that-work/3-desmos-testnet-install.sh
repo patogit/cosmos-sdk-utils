@@ -82,6 +82,10 @@ nano ${HOME}/.desmos/config/app.toml
 
 desmos unsafe-reset-all
 
+echo "Setup is complete."
+echo "Press space to start synchronizing with the network, or press ctrl-c to exit without starting."
+read -s -d ' '
+
 sudo systemctl start desmos.service
 
 echo "---------------"
