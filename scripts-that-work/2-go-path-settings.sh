@@ -1,5 +1,5 @@
 #!/bin/bash
-# ./2-go-path-settings.sh go-workspace
+# ./2-go-path-settings.sh
 
 echo 'export GOPATH="$HOME/go"' >> ~/.profile
 echo 'export GOBIN="$GOPATH/bin"' >> ~/.profile
