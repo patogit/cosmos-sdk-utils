@@ -24,14 +24,14 @@ MONIKER=$3
 mkdir -p $GOPATH/src/github.com/desmos-labs
 cd $GOPATH/src/github.com/desmos-labs
 git clone https://github.com/desmos-labs/desmos.git
-cd hub
+cd desmos
 git fetch
 git checkout $VERSION
 make install
 
 desmos version
 
-echo "sentinel tools" $VERSION "built and installed. Press space to continue."
+echo "desmos" $VERSION "built and installed. Press space to continue."
 read -s -d ' '
 
 # Create systemd service:
