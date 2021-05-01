@@ -8,7 +8,7 @@
 # 2) Run the go-install.sh script.
 # 3) Reboot.
 # 4) Run this script to install regen-ledger and cosmovisor.
-# ./2-sentinel-mainnet-install.sh v0.5.0 sentinelhub-1 "Akik Takat P2P 1"
+# ./2-sentinel-mainnet-install.sh v0.5.0 sentinelhub-1 "\"Akik Takat P2P 1\""
 
 # Set versions of cosmos-sdk (for cosmovisor) and regen-ledger before running this script.
 VERSION=$1
