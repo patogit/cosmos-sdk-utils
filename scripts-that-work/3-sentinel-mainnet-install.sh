@@ -63,7 +63,7 @@ sentinelhubd init --chain-id=$CHAINID $MONIKER
 echo "Get mainnet genesis"
 curl -s https://raw.githubusercontent.com/sentinel-official/launch/sentinelhub-1/sentinelhub-1/genesis.json > ~/.sentinelhubd/config/genesis.json
 echo "Checksums"
-jq -S -c -M '' ~/.sentinelhubd/config/genesis.json | shasum -a 256
+sha256sum ~/.sentinelhubd/config/genesis.json
 echo "79a2b73ed7ef35f767d1591a78086d594b11c65af75945e615371d35b94b613d"
 
 echo "Verify that the two strings above are equal. Press space to continue."
