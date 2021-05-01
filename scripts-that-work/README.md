@@ -4,4 +4,5 @@ Change the stuff at https://github.com/regen-network/mainnet/tree/main/regen-1#s
 
 UPDATE:
 Script 1 now assumes Ubuntu. I'm using Ubuntu 20.04, haven't tested it elsewhere.
-Script 2-go-install.sh is lo longer needed (it's distro agnostic, though, so you can use it if you don't use Ubuntu) and 2-go-path-setting.sh isn't working, so run those commands manually. Script 3 for Sentinel is working great!
+Script 2-go-install.sh is lo longer needed (it's distro agnostic, though, so you can use it if you don't use Ubuntu), so on Ubuntu use 2-go-path-setting.sh. Script 3 for Sentinel is working great!
+Script 3 for Desmos is working great!
