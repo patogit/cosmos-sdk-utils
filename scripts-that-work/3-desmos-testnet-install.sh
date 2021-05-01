@@ -7,7 +7,7 @@
 # 1) Set up a non-root user and log in as that user. You can use script 1 from this repo for that purpose.
 # 2) Run the 2-go-path-settings.sh script.
 # 3) Run . ~/.profile.
-# 4) Run this script to install sentinelhubd and sentinelhubcli and initialize on the chain of your choosing.
+# 4) Run this script to install desmos and initialize on the chain of your choosing.
 #
 # ./3-desmos-testnet-install.sh <hub-version> <chain-id> <moniker>
 # for example:
@@ -86,35 +86,37 @@ sudo systemctl start desmos.service
 
 echo "---------------"
 echo "---------------"
-echo "Installation of sentinel tools complete."
-echo "sentinelhub-1 mainnet now syncing."
-echo "journalctl -u sentinelhubd -f will show you recent logs."
+echo "Installation of desmos complete."
+echo "morpheus-apollo-1 testnet now syncing."
+echo "It may take up to ten minutes for blocks to start syncing."
+echo "journalctl -u desmos -f will show you recent logs."
 
 echo "---------------"
 echo "If this is validator node or otherwise needs keys:"
-echo "regen keys add <your-new-key>"
+echo "desmos keys add <your-new-key>"
 echo "Make sure you back up the mnemonics !!!"
 echo "Or if you have the mnemonic for a key, you can import it with"
-echo "regen keys add <key-name> --recover"
+echo "desmos keys add <key-name> --recover"
 echo "---------------"
 
 echo "To configure your node further, see"
-echo "https://github.com/sentinel-official/docs/blob/master/guides/mainnets/sentinelhub-1/README.md"
+echo "https://docs.desmos.network/fullnode/setup.html"
 echo "and"
-echo "https://github.com/sentinel-official/launch"
+echo "https://github.com/desmos-labs/morpheus/tree/master/morpheus-apollo-1"
 echo "---------------"
 
 echo "Before starting your validator, review the utility scripts at"
-echo "https://github.com/swidnikk/regen-utils"
+echo "https://github.com/patogit/cosmos-sdk-utils"
+echo "and the repositories linked there."
 echo "---------------"
 
 
 echo "If you want to make any changes to you config,"
-echo "restart sentinelhubd.service after making changes."
+echo "restart desmos.service after making changes."
 echo "---------------"
 
 echo "To fetch a data backup via scp, you might use"
-echo "scp -v user@ip.address:/home/user/.regen/data-backup.tar.gz ."
+echo "scp -v user@ip.address:/home/user/.desmos/data-backup.tar.gz ."
 echo "---------------"
 
 echo "To the Earth!"
