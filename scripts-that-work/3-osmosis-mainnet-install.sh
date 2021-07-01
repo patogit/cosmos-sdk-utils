@@ -131,8 +131,8 @@ echo "---------------"
 echo "Before starting your validator, review the utility scripts at"
 echo "https://github.com/patogit/cosmos-sdk-utils"
 echo "and the repositories linked there."
+echo "See also the block explorer at https://osmosis.aneka.io/"
 echo "---------------"
-
 
 echo "If you want to make any changes to you config,"
 echo "restart osmosisd.service after making changes."
