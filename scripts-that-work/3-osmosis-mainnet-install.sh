@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# NOT WORKING YET
+
 # This script is part of a set of scripts that set up a node for the osmosis-1 mainnet of the Osmosis Network.
 # Run this as a user that can sudo.
 # This script puts things in ~/.profile with the assumption that you will run it from a non-login shell.
