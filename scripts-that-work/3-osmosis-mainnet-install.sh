@@ -11,7 +11,7 @@
 #
 # ./3-osmosis-mainnet-install.sh <git project directory> <branch-or-tag> <chain-id> <moniker>
 # for example:
-# ./3-osmosis-mainnet-install.sh "osmosis-labs/osmosis" "v1.0.1" osmosis-1 Delicious
+# ./3-osmosis-mainnet-install.sh "osmosis-labs/osmosis" "v1.0.1" osmosis-1 "My Validator Name"
 # make sure your moniker has no spaces. You can change the moniker later if you want to add spaces.
 
 # Provide these arguments:
