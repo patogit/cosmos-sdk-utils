@@ -26,9 +26,9 @@ git clone -b $VERSION https://github.com/$PROJECT.git $GOPATH/src/github.com/$PR
 cd $GOPATH/src/github.com/$PROJECT
 make install
 
-osmosisd version
+$GOPATH/bin/osmosisd version
 
-osmosisd config chain-id osmosis-1
+$GOPATH/bin/osmosisd config chain-id osmosis-1
 
 echo "osmosis" $VERSION "built and installed. Press space to continue."
 read -s -d ' '
@@ -40,9 +40,9 @@ make cosmovisor
 cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
 
 
-osmosisd init --chain-id=$CHAINID $MONIKER
+$GOPATH/bin/osmosisd init --chain-id=$CHAINID $MONIKER
 
-osmosisd config chain-id $CHAINID
+$GOPATH/bin/osmosisd config chain-id $CHAINID
 
 mkdir -p ~/.osmosisd/cosmovisor/genesis/bin
 mkdir -p ~/.osmosisd/cosmovisor/upgrades
@@ -99,7 +99,7 @@ echo "Press space when you are ready to edit."
 read -s -d ' '
 nano ${HOME}/.osmosisd/config/app.toml
 
-osmosisd unsafe-reset-all
+$GOPATH/bin/osmosisd unsafe-reset-all
 
 echo "Setup is complete. Ready to sync the chain. No keys or validator created yet."
 echo "Press space to start synchronizing with the network, or press ctrl-c to exit without starting."
