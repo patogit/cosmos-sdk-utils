@@ -50,7 +50,7 @@ mkdir -p ~/.osmosisd/cosmovisor/upgrades
 echo "# Setup Cosmovisor" >> ~/.profile
 echo "export DAEMON_NAME=osmosisd" >> ~/.profile
 echo "export DAEMON_HOME=$HOME/.osmosisd" >> ~/.profile
-echo 'export PATH="$DAEMON_HOME/cosmovisor:$PATH"' >> ~/.profile
+echo "export PATH=\"$DAEMON_HOME/cosmovisor:\$PATH\"" >> ~/.profile
 source ~/.profile
 
 mv $GOPATH/bin/osmosisd ~/.osmosisd/cosmovisor/genesis/bin
